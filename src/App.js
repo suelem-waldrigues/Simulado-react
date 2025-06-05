@@ -17,7 +17,7 @@ function App() {
         <Route path="/cadastrar" element={<Cadastrar />} />
         <Route path="/produtos/:id" element={<Produtos />} />
       </Routes>
-      <Footer /> {/* Aqui aparece o rodapé em todas as páginas */}
+      <Footer /> {}
     </Router>
   );
 }
