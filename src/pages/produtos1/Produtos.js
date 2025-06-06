@@ -9,21 +9,21 @@ function Produtos() {
   }
 
   return (
-    <div className="produtos-container">
+    <div className="produtos">
       <h2>Produtos Cadastrados</h2>
-      <p>Total: {produtos.length}</p>
-      <ul>
-        {produtos.map((produto) => (
-          <li key={produto.id}>
-            {produto.nome} - R$ {produto.preco}
-            {' '}
-        
-            <Link to={`/produtos/${produto.id}`}>Ver detalhes</Link>
-          </li>
-        ))}
-      </ul>
+      <p>Total de produtos: {produtos.length}</p>
+
+      {produtos.map((produto) => (
+        <div className="produto-card" key={produto.id}>
+          <span>
+            <strong>{produto.nome}</strong> - R$ {produto.preco}
+          </span>
+          <Link to={`/produtos/${produto.id}`}>Ver detalhes</Link>
+        </div>
+      ))}
     </div>
   );
 }
 
 export default Produtos;
+
