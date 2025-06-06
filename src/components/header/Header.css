@@ -1,0 +1,17 @@
+/* src/components/Header.css */
+
+.header {
+  background-color: blue;
+  padding: 1rem;
+  color: white;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.header a {
+  color: white;
+  margin-right: 1rem;
+  text-decoration: none;
+}

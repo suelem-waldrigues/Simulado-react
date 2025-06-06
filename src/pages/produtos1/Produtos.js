@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import './Produtos.css';
 
 function Produtos() {
   const produtos = JSON.parse(localStorage.getItem('produtos')) || [];
@@ -8,15 +9,16 @@ function Produtos() {
   }
 
   return (
-    <div>
+    <div className="produtos-container">
       <h2>Produtos Cadastrados</h2>
       <p>Total: {produtos.length}</p>
       <ul>
-        {produtos.map((p) => (
-          <li key={p.id}>
-            {p.nome} - R$ {p.preco}
+        {produtos.map((produto) => (
+          <li key={produto.id}>
+            {produto.nome} - R$ {produto.preco}
             {' '}
-            <Link to={`/produtos/${p.id}`}>Ver detalhes</Link>
+        
+            <Link to={`/produtos/${produto.id}`}>Ver detalhes</Link>
           </li>
         ))}
       </ul>

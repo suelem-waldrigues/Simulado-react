@@ -1,5 +1,6 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
+import './Product.css';
 
 function ProductDetails() {
   const { id } = useParams();
@@ -7,7 +8,6 @@ function ProductDetails() {
 
   useEffect(() => {
     console.log("Produto carregado!");
-
     return () => {
       console.log("Saindo da página de detalhes.");
     };
@@ -21,7 +21,7 @@ function ProductDetails() {
   }
 
   return (
-    <div>
+    <div className="product-details">
       <h2>{produto.nome}</h2>
       <p>Preço: R$ {produto.preco}</p>
       <p>Descrição: {produto.descricao || 'Sem descrição'}</p>
