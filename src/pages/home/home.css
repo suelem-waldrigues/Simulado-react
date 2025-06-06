@@ -1,0 +1,9 @@
+.home h1{
+    color: blue;
+}
+
+.home{
+    margin: auto;
+    padding: 18px;
+    background-color: rgb(205, 204, 203);
+}

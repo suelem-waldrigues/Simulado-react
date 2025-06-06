@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './cadastrar.css';
 
 function Cadastrar() {
   const [nome, setNome] = useState('');
@@ -24,7 +25,7 @@ function Cadastrar() {
   }
 
   return (
-    <div>
+    <div className="cadastrar">
       <h2>Cadastro de Produto</h2>
 
       <input

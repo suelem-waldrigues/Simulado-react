@@ -1,9 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
+import Home from './pages/home/Home';
 import Produtos from './pages/produtos1/Produtos';
-import Cadastrar from './pages/Cadastrar';
+import Cadastrar from './pages/cadastro/Cadastrar';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import ProductDetails from './components/product/ProductDetails';

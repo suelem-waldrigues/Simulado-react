@@ -1,0 +1,9 @@
+.cadastrar{
+    background-color: rgb(230, 230, 230);
+    margin-top: auto;
+    padding: 10px;
+}
+
+.cadastrar button{
+    background-color: blue;
+}
