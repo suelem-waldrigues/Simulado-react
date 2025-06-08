@@ -1,5 +1,9 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Input from '../../components/Input';
+import TextArea from '../../components/TextArea';
+import Botao from '../../components/Botao';
+import Titulo from '../../components/Titulo';
 import './cadastrar.css';
 
 function Cadastrar() {
@@ -26,32 +30,18 @@ function Cadastrar() {
 
   return (
     <div className="cadastrar">
-      <h2>Cadastro de Produto</h2>
+      <Titulo>Cadastro de Produto</Titulo>
 
-      <input
-        type="text"
-        placeholder="Nome"
-        value={nome}
-        onChange={(e) => setNome(e.target.value)}
-      />
+      <Input placeholder="Nome" value={nome} onChange={(e) => setNome(e.target.value)} />
       <br />
 
-      <input
-        type="text"
-        placeholder="Preço"
-        value={preco}
-        onChange={(e) => setPreco(e.target.value)}
-      />
+      <Input placeholder="Preço" value={preco} onChange={(e) => setPreco(e.target.value)} />
       <br />
 
-      <textarea
-        placeholder="Descrição (opcional)"
-        value={descricao}
-        onChange={(e) => setDescricao(e.target.value)}
-      />
+      <TextArea placeholder="Descrição (opcional)" value={descricao} onChange={(e) => setDescricao(e.target.value)} />
       <br />
 
-      <button onClick={salvarProduto}>Salvar</button>
+      <Botao onClick={salvarProduto}>Salvar</Botao>
     </div>
   );
 }

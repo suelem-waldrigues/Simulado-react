@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import Titulo from '../../components/Titulo';
 import './Produtos.css';
 
 function Produtos() {
@@ -10,7 +11,7 @@ function Produtos() {
 
   return (
     <div className="produtos">
-      <h2>Produtos Cadastrados</h2>
+      <Titulo>Produtos Cadastrados</Titulo>
       <p>Total de produtos: {produtos.length}</p>
 
       {produtos.map((produto) => (
@@ -25,5 +26,7 @@ function Produtos() {
   );
 }
 
-export default Produtos;
 
+
+
+export default Produtos;
