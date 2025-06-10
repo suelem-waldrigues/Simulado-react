@@ -1,6 +1,7 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import './Product.css';
+import Botao from '../Botao';
 
 function ProductDetails() {
   const { id } = useParams();
@@ -25,7 +26,7 @@ function ProductDetails() {
       <h2>{produto.nome}</h2>
       <p>Preço: R$ {produto.preco}</p>
       <p>Descrição: {produto.descricao || 'Sem descrição'}</p>
-      <button onClick={() => navigate('/produtos')}>Voltar</button>
+      <Botao onClick={() => navigate('/produtos')}>Voltar</Botao>
     </div>
   );
 }
